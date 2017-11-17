@@ -46,7 +46,7 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-   config.vm.synced_folder "../data/wp_project", "/var/www/html/wp_project", owner: "vagrant",
+   config.vm.synced_folder "../data/wpjs", "/var/www/html/wpjs", owner: "vagrant",
     group: "www-data",
     mount_options: ["dmode=775,fmode=664"]
 
@@ -83,7 +83,7 @@ Vagrant.configure("2") do |config|
      echo "Updated mysql bind address in /etc/mysql/my.cnf to 0.0.0.0 to allow external connections."
      sudo service mysql stop
      sudo service mysql start
-     mysql -u root -e "UPDATE wp_js_course.wp_options SET option_value = 'http://wpdev.com/wp_project' WHERE option_id = '2';"
+     mysql -u root -e "UPDATE wp_js_course.wp_options SET option_value = 'http://wpdev.com/wpjs' WHERE option_id = '2';"
      sudo a2enmod rewrite
      sudo service apache2 restart
    SHELL
