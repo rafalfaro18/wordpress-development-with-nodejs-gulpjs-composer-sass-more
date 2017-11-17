@@ -19,6 +19,7 @@ gulp.task('minify_css_and_copy', function() {
 
 gulp.task('watch', function () {
   gulp.watch('dev/*.css', ['minify_css_and_copy']);
+  console.log('You have changed a file');
 });
 
 gulp.task('default', ['watch']);
