@@ -46,7 +46,9 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-   config.vm.synced_folder "../data", "/vagrant"
+   config.vm.synced_folder "../data/wp_project", "/var/www/html/wp_project", owner: "vagrant",
+    group: "www-data",
+    mount_options: ["dmode=775,fmode=664"]
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -68,9 +70,12 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL
      apt-get update
-     sudo apt-get install -y apache2 php5 libapache2-mod-php5 php5-mysql php5-odbc php5-pgsql php5-gd php5-ldap php5-curl php5-json mysql-client mysql-server mysql-utilities mysql-mmm-monitor mysql-mmm-tools
-     sudo rm -fr /var/www/html
-     sudo ln -s /vagrant /var/www/html
+     sudo apt-get install -y apache2 php5 libapache2-mod-php5 php5-mysql php5-odbc php5-pgsql php5-gd php5-ldap php5-curl php5-json mysql-client mysql-utilities mysql-mmm-monitor mysql-mmm-tools
+     export DEBIAN_FRONTEND=noninteractive
+     sudo -E apt-get -q -y install mysql-server
+     sudo apt-get -f install -y
      mysql -u root -e "CREATE DATABASE wp_js_course;"
+     sudo a2enmod rewrite
+     sudo service apache2 restart
    SHELL
 end
