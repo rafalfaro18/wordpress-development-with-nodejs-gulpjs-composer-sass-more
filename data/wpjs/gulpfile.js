@@ -17,4 +17,8 @@ gulp.task('minify_css_and_copy', function() {
   .pipe(gulp.dest('wp-content/themes/twentyfifteen/css'));
 });
 
+gulp.task('watch', function () {
+  gulp.watch('dev/*.css', ['minify_css_and_copy']);
+});
+
 gulp.task('default', ['minify_css_and_copy']);
