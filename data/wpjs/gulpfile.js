@@ -1,6 +1,7 @@
 // GulpFiles
 
 var gulp = require('gulp');
+var uglify = require('gulp-uglify');
 
 gulp.task('runnow', function() {
   var d = new Date();
