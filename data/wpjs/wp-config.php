@@ -85,8 +85,8 @@ define('WP_DEBUG', false);
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
-define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content' );
-define( 'WP_CONTENT_URL', 'http://wpdev.com/wp_project/wp-content' );
+define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/wpjs' );
+define( 'WP_CONTENT_URL', 'http://wpdev.com/wpjs' );
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
