@@ -21,4 +21,4 @@ gulp.task('watch', function () {
   gulp.watch('dev/*.css', ['minify_css_and_copy']);
 });
 
-gulp.task('default', ['minify_css_and_copy']);
+gulp.task('default', ['watch']);
