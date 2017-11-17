@@ -1,0 +1,11 @@
+{
+  "name": "wp_project",
+  "version": "1.0.0",
+  "description": "Learn WP with JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rafael Alfaro",
+  "license": "MIT"
+}
