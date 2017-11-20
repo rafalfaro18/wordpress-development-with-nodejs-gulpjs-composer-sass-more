@@ -11,7 +11,9 @@ var sass_dir =  'dev/*.scss';
 gulp.task('process_sass', function () {
   console.log('Now processing SASS');
   return gulp.src(sass_dir)
-  .pipe(sass())
+  .pipe(sass({
+    outputStyle : 'compressed'
+  }))
   .pipe(gulp.dest('wp-content/themes/twentyfifteen/css'));
 });
 
