@@ -15,8 +15,7 @@ gulp.task('process_sass', function () {
   .pipe(sass({
     outputStyle : 'compressed'
   }))
-  .pipe(gulp.dest('wp-content/themes/twentyfifteen/css'))
-  .pipe(browserSync.stream());
+  .pipe(gulp.dest('wp-content/themes/twentyfifteen/css'));
 });
 
 gulp.task('php', function (){
@@ -39,7 +38,7 @@ gulp.task('serve', ['process_sass'], function(){
         proxy   : "http://wpdev.com/wpjs"
     });
 
-    gulp.watch(sass_dir, ['process_sass']);
+    gulp.watch(sass_dir, ['process_sass']).on('change', browserSync.reload);
     gulp.watch('wp-content/**/**/*.php').on('change', browserSync.reload);
 });
 
