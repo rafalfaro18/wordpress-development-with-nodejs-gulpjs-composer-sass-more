@@ -6,9 +6,11 @@ var cleancss = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 
+var sass_dir =  'dev/*.scss';
+
 gulp.task('process_sass', function () {
   console.log('Now processing SASS');
-  return gulp.src('dev/*.scss')
+  return gulp.src(sass_dir)
   .pipe(sass())
   .pipe(gulp.dest('wp-content/themes/twentyfifteen/css'));
 });
@@ -19,6 +21,7 @@ gulp.task('php', function (){
 
 gulp.task('watch', function () {
   gulp.watch('dev/*.css', ['minify_css_and_copy']);
+  gulp.watch(sass_dir, ['process_sass']);
   gulp.watch('wp-content/**/**/*.php', ['php']);
   console.log('You have changed a file');
 });
