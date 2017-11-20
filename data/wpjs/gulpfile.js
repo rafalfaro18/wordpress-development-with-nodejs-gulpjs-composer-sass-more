@@ -5,6 +5,7 @@ var uglify = require('gulp-uglify');
 var cleancss = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
+browserSync = require('browser-sync').create();
 
 var sass_dir =  'dev/*.scss';
 
