@@ -8,6 +8,9 @@ var sass = require('gulp-sass');
 
 gulp.task('process_sass', function () {
   console.log('Now processing SASS');
+  return gulp.src('dev/*.scss')
+  .pipe(sass())
+  .pipe('wp-content/themes/twentyfifteen/css');
 });
 
 /*gulp.task('minify_css_and_copy', function() {
