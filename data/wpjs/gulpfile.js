@@ -6,6 +6,10 @@ var cleancss = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 
+gulp.task('process_sass', function () {
+  console.log('Now processing SASS');
+});
+
 /*gulp.task('minify_css_and_copy', function() {
   var d = new Date();
   var timestamp = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
