@@ -83,7 +83,6 @@ Vagrant.configure("2") do |config|
      echo "Updated mysql bind address in /etc/mysql/my.cnf to 0.0.0.0 to allow external connections."
      sudo service mysql stop
      sudo service mysql start
-     mysql -u root -e "UPDATE wp_js_course.wp_options SET option_value = 'http://wpdev.com/wpjs' WHERE option_id = '2';"
      sudo a2enmod rewrite
      sudo service apache2 restart
    SHELL
