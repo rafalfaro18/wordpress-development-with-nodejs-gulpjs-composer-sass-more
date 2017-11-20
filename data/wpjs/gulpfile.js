@@ -40,8 +40,7 @@ gulp.task('serve', ['process_sass'], function(){
     });
 
     gulp.watch(sass_dir, ['process_sass']);
-    gulp.watch('./**/*.php').on('change', browserSync.reload);
-    gulp.watch('wp-content/**/**/*.php', ['php']);
+    gulp.watch('wp-content/**/**/*.php').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['message', 'watch', 'process_sass']);
