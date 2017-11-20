@@ -15,7 +15,7 @@ gulp
 
 - Go to [http://wpdev.com/wpjs](http://wpdev.com/wpjs) and install WordPress
 
-- Edit wp_options table change option_value of option named "home" to: [http://wpdev.com/wpjs](http://wpdev.com/wpjs) user and password are "remoto" without quotes.
+- Edit wp_options table change option_value of option named "home" to: [http://wpdev.com/wpjs](http://wpdev.com/wpjs) . User and password are "remoto" without quotes.
 
 - For browser sync while coding run:
 ```bash
