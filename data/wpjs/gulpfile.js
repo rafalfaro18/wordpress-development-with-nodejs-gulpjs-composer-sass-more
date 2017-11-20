@@ -23,7 +23,7 @@ gulp.task('php', function (){
 
 gulp.task('watch', function () {
   gulp.watch('dev/*.css', ['minify_css_and_copy']);
-  gulp.watch('wp-content/themes/twentyfifteen/*.php', ['php']);
+  gulp.watch('wp-content/**/**/*.php', ['php']);
   console.log('You have changed a file');
 });
 
