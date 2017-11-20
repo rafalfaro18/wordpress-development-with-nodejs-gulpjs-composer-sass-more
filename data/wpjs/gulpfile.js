@@ -6,7 +6,7 @@ var cleancss = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 
-gulp.task('minify_css_and_copy', function() {
+/*gulp.task('minify_css_and_copy', function() {
   var d = new Date();
   var timestamp = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
   // place code for your default task here
@@ -16,7 +16,7 @@ gulp.task('minify_css_and_copy', function() {
   .pipe(cleancss())
   .pipe(concat('main.css'))
   .pipe(gulp.dest('wp-content/themes/twentyfifteen/css'));
-});
+});*/
 
 gulp.task('php', function (){
   console.log('Yu have changed a PHP file');
