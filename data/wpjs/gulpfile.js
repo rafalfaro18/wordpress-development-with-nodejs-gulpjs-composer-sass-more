@@ -11,7 +11,7 @@ gulp.task('minify_css_and_copy', function() {
   // place code for your default task here
   console.log('Minifying css at '+timestamp);
 
-  return gulp.src('dev/*.css')
+  return gulp.src(['dev/css1.css', 'dev/*.css'])
   .pipe(cleancss())
   .pipe(concat('main.css'))
   .pipe(gulp.dest('wp-content/themes/twentyfifteen/css'));
