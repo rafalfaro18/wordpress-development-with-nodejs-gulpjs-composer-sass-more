@@ -8,7 +8,7 @@
   "require": {
     "php": ">=5.4",
     "johnpbloch/wordpress": "4.9",
-    "wpackagist-plugin/wordpress-seo" 
+    "wpackagist-plugin/wordpress-seo" : "*"
   },
   "extra": {
     "wordpress-install-dir": "wp"
