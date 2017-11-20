@@ -16,7 +16,7 @@ gulp.task('process_sass', function () {
     outputStyle : 'compressed'
   }))
   .pipe(gulp.dest('wp-content/themes/twentyfifteen/css'))
-  .pipe(browserSync.stream();
+  .pipe(browserSync.stream());
 });
 
 gulp.task('php', function (){
