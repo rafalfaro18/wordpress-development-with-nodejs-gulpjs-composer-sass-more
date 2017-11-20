@@ -15,7 +15,11 @@ gulp
 
 - Go to [http://wpdev.com/wpjs](http://wpdev.com/wpjs) and install WordPress
 
-- Edit wp_options table change option_value of option named "home" to: [http://wpdev.com/wpjs](http://wpdev.com/wpjs) . User and password are "remoto" without quotes.
+- Edit wp_options table change option_value of option named "home" to: [http://wpdev.com/wpjs](http://wpdev.com/wpjs) . User and password are "remoto" without quotes. You can easily do that sshing the vm and running:
+
+```bash
+mysql -u remoto -premoto -e "UPDATE wp_js_course.wp_options SET option_value = 'http://wpdev.com/wpjs' WHERE option_id = '2';"
+```
 
 - For browser sync while coding run:
 ```bash
