@@ -2,3 +2,4 @@ wp
 vendor
 node_modules
 wp-content/themes/**/css/main.css
+wp-content/plugins/**
