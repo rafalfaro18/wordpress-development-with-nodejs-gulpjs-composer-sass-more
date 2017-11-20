@@ -27,4 +27,8 @@ gulp.task('watch', function () {
   console.log('You have changed a file');
 });
 
-gulp.task('default', ['watch']);
+gulp.task('message', function() {
+  console.log('this is a message');
+});
+
+gulp.task('default', ['message', 'watch']);
