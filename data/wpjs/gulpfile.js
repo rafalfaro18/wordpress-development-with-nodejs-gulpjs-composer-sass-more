@@ -36,4 +36,4 @@ gulp.task('message', function() {
   console.log('this is a message');
 });
 
-gulp.task('default', ['message', 'watch']);
+gulp.task('default', ['message', 'watch', 'process_sass']);
