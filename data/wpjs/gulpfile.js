@@ -34,4 +34,14 @@ gulp.task('message', function() {
   console.log('this is a message');
 });
 
+gulp.task('serve', ['process_sass'], function(){
+    browserSync.init({
+        proxy   : "http://wpdev.com/wpjs"
+    });
+
+    gulp.watch(sass_dir, ['process_sass']);
+    gulp.watch('./**/*.php').on('change', browserSync.reload);
+    gulp.watch('wp-content/**/**/*.php', ['php']);
+});
+
 gulp.task('default', ['message', 'watch', 'process_sass']);
