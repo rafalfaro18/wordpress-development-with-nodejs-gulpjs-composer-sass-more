@@ -17,4 +17,7 @@ gulp
 
 - Edit wp_options table change option_value of option named "home" to: [http://wpdev.com/wpjs](http://wpdev.com/wpjs) user and password are "remoto" without quotes.
 
-- While developing run gulp serve for browser sync
+- For browser sync while coding run:
+```bash
+gulp serve
+```
